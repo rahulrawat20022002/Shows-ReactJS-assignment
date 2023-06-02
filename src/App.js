@@ -1,11 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
-import Api from 'C:/Users/AMD/Desktop/Show React/shows/src/Components/Api';
+
+import Api2 from './Components/Api2';
 
 function App() {
   return (
     <div className="App">
-      <Api/>
+      {/* <Api/> */}
+      <Api2/>
       
     </div>
   );

@@ -10,14 +10,20 @@ function Allamerica() {
   const getData=()=>{
 
 
-      fetch(
-        "https://api.tvmaze.com/search/shows?q=all"
-      ).then((response)=>response.json())
-      .then((json)=>{
-        setdata(json);
-        console.log(json);
-    
-      })
+    try{
+
+        fetch(
+          "https://api.tvmaze.com/search/shows?q=all"
+        ).then((response)=>response.json())
+        .then((json)=>{
+          setdata(json);
+          // console.log(json);
+      
+        })
+    }
+    catch(error){
+      console.error("error");
+    }
   }
 
   useEffect(() => {
@@ -26,7 +32,11 @@ function Allamerica() {
   
   return (
     <div>
-      {data.show.name}
+     {(data[0].show.summary)}
+      
+       
+       {/* {data.show ? data.show : 'Default Name'} */}
+
     </div>
   )
 }

@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from 'react'
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import ReactDOM from "react-dom";
-// import All_america from "C:/Users/AMD/Desktop/Show React/shows/src/Components/All_america"
+import Allamerica from './Allamerica';
 
+function Api2() {
 
-function App() {
-  const [users, setUsers] = useState([]);
+    const [users, setUsers] = useState([]);
 
   // Function to collect data
   const getApiData = async () => {
@@ -40,22 +40,14 @@ function App() {
           
             <button >{data.show.name}</button>
           </Link>
-          <p>{JSON.stringify(data.show.summary,null,2)}</p>
+          
           <p></p>
       
         </div>
         )
       })}
-      
-
-      
-  
-  
-      
-
-
     </div>
-  );
+  )
 }
 
-export default App;
+export default Api2;
